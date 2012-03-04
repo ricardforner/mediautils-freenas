@@ -1,7 +1,7 @@
 #!/usr/local/bin/php
 <?php
 /**
- * Services_MediaUtils_Edit
+ * Services_MediaUtils_Movie_Edit
  *
  * Pagina que contiene la ficha de edicion del modulo MediaUtils
  *
@@ -10,8 +10,9 @@
  * @package mediautils
  */
 
-require("auth.inc");
-require("guiconfig.inc");
+require_once("auth.inc");
+require_once("guiconfig.inc");
+require_once("ext/mediautils/class.mediautils.php");
 
 $uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
@@ -23,7 +24,6 @@ if (isset($_POST['tipo']))
 
 $pgtitle = array(gettext("Extensions"), gettext("Service") ."|". "MediaUtils" ."|". gettext("Configuration"), isset($uuid) ? gettext("Edit") : gettext("Add"));
 
-include 'class.mediautils.php';
 $app = new MediaUtils();
 $pItem = array();
 

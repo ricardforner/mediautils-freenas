@@ -10,12 +10,12 @@
  * @package mediautils
  */
 
-require("auth.inc");
-require("guiconfig.inc");
+require_once("auth.inc");
+require_once("guiconfig.inc");
+require_once("ext/mediautils/class.mediautils.php");
 
 $pgtitle = array(gettext("Extensions"), gettext("Service") ."|". "MediaUtils" ."|". gettext("Configuration"));
 
-include 'class.mediautils.php';
 $app = new MediaUtils();
 
 unset($errormsg);

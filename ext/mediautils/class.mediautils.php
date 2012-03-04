@@ -11,7 +11,7 @@
  * @link http://code.google.com/p/mediautils-freenas/
  */
 
-include_once('class.mediautilsbase.php');
+require_once('class.mediautilsbase.php');
 
 class MediaUtils extends MediaUtilsBase {
 

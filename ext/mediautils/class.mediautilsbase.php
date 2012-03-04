@@ -9,7 +9,7 @@
  * @package mediautils
  */
 
-include_once('class.crud.php');
+require_once('class.crud.php');
 
 class MediaUtilsBase extends crud {
 
